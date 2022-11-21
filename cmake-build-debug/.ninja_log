@@ -1,0 +1,20 @@
+# ninja log v5
+4	993	1669020030904074524	CMakeFiles/videoGame.dir/Player.cpp.o	c963f65c7542e4c8
+8	761	1669010659944232893	CMakeFiles/videoGame.dir/Mommy.cpp.o	168320f44a3fcf27
+4	708	1668856917741722651	CMakeFiles/videoGame.dir/SpiderHyphenMan.cpp.o	ef8c0a920da1cadc
+5	781	1668856907802232657	CMakeFiles/videoGame.dir/TextureHolder.cpp.o	42f9bf1f6b7272e
+7	1942	1668990500965295546	CMakeFiles/videoGame.dir/ResourceHolder.cpp.o	5c2fdf8aa9520deb
+5	714	1669020030623163630	CMakeFiles/videoGame.dir/Animation.cpp.o	219a704bababb79e
+5	952	1668930857754832390	CMakeFiles/videoGame.dir/Application.cpp.o	5234c8621109e2b0
+6	982	1668823108496587672	CMakeFiles/videoGame.dir/Components.cpp.o	a4a744d034021949
+7	738	1669010659920611966	CMakeFiles/videoGame.dir/Entity.cpp.o	9e61688b6863580f
+6	778	1669019077651092359	CMakeFiles/videoGame.dir/Game.cpp.o	16007f1f702f2dba
+7	220	1668823107732851175	CMakeFiles/videoGame.dir/Updater.cpp.o	d57355fb46c08a10
+6	980	1668823108494322796	CMakeFiles/videoGame.dir/EventHandler.cpp.o	2de4d08b931d6987
+993	1074	1669020030987869631	videoGame	ef839e51c3c893d
+5	776	1669019077648604231	CMakeFiles/videoGame.dir/main.cpp.o	bf0663dced027d5
+0	602	1668815669124775080	CMakeFiles/videoGame.dir/mainMenu.cpp.o	2265fa47707e48ba
+0	537	1668977804409659542	build.ninja	c8a53c0d96909266
+4	611	1669020082383575263	CMakeFiles/videoGame.dir/Animation.cpp.o	219a704bababb79e
+3	891	1669020082662992590	CMakeFiles/videoGame.dir/Player.cpp.o	c963f65c7542e4c8
+891	954	1669020082729528437	videoGame	ef839e51c3c893d
