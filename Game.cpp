@@ -6,6 +6,7 @@
 
 Game::Game()
 {
+    player.setTexture(Spidey);
     addComponents(player);
 }
 

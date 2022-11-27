@@ -11,6 +11,7 @@ class Animation
 private:
     unsigned int m_currentFrame = 0;
     unsigned int m_frameCount = 0;
+    sf::Clock clock;
     float m_updateTime = 0.f;
     sf::IntRect* m_textureRect = nullptr;
     sf::Sprite* m_Sprite = nullptr;

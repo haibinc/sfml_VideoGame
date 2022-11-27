@@ -3,7 +3,7 @@ project(videoGame)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp mainMenu.cpp mainMenu.h Application.cpp Application.h Components.cpp Components.h EventHandler.cpp EventHandler.h Updater.cpp Updater.h Player.cpp Player.h Animation.cpp Animation.h ResourceHolder.cpp ResourceHolder.h Entity.cpp Entity.h Mommy.cpp Mommy.h ResourceIdentifier.h Game.cpp Game.h playerType.h)
+set(SOURCE_FILES main.cpp mainMenu.cpp mainMenu.h Application.cpp Application.h Components.cpp Components.h EventHandler.cpp EventHandler.h Updater.cpp Updater.h Player.cpp Player.h Animation.cpp Animation.h ResourceHolder.cpp ResourceHolder.h Entity.cpp Entity.h Mommy.cpp Mommy.h ResourceIdentifier.h Game.cpp Game.h playerType.h States.cpp States.h statesEnum.h Position.cpp Position.h MouseEvents.cpp MouseEvents.h)
 add_executable(videoGame ${SOURCE_FILES})
 include_directories(/usr/local/include)
 

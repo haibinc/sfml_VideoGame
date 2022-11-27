@@ -25,7 +25,7 @@ public:
 public:
     Textures::ID toTextureID(playerType mType);
     void setTexture(playerType mType);
-    void initAnimations();
+    void initAnimations(playerType mType);
     void animate();
     virtual void eventHandler(sf::RenderWindow &window, sf::Event event);
     virtual void update();

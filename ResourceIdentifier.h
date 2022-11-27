@@ -9,12 +9,19 @@ namespace Textures
     enum ID
     {
         Spidey,
-        Batman,
         Hollow,
         Strawberry,
         Scientific,
         Goth,
         Firewomen
+    };
+}
+
+namespace Font
+{
+    enum ID
+    {
+
     };
 }
 

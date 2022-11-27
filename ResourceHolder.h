@@ -15,10 +15,10 @@ template <class Identifier, class Resource>
 class ResourceHolder
 {
 private:
-    std::map<Identifier, std::unique_ptr<Resource>> mResourceMap;
+    static std::map<Identifier, std::unique_ptr<Resource>> mResourceMap;
 public:
     ResourceHolder();
-    void load(Identifier id, const std::string& fileName);
+    static void load(Identifier id, const std::string& fileName);
     Resource& get(Identifier id);
     const Resource& get(Identifier id) const;
 };

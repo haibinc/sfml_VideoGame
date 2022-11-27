@@ -4,14 +4,11 @@
 
 #include "Player.h"
 Player::Player()
-:Player(Spidey)
 {
-    player.setTexture(mTextures.get(toTextureID(mType)));
-    initAnimations();
+
 }
 
 Player::Player(playerType mType)
-:mType(mType)
 {
 }
 
@@ -24,11 +21,6 @@ Textures::ID Player::toTextureID(playerType mType)
             mTextures.load(Textures::Spidey, "Spider-Man.png");
             return Textures::Spidey;
         }
-        case Batman:
-        {
-            mTextures.load(Textures::Batman, "Batman.png");
-            return Textures::Batman;
-        }
         case Hollow:
         {
             mTextures.load(Textures::Hollow, "Hollow.png");
@@ -39,42 +31,68 @@ Textures::ID Player::toTextureID(playerType mType)
 
 void Player::setTexture(playerType mType)
 {
-    this->mType = mType;
     player.setTexture(mTextures.get(toTextureID(mType)));
+    initAnimations(mType);
 }
 
-void Player::initAnimations()
+void Player::initAnimations(playerType mType)
 {
     switch(mType)
     {
         case Spidey :
         {
-            m_Animations["walk"].create(6, 0, 0.08f, sf::Vector2u(80,80), player, 0);
-            m_Animations["idle"].create(7, 0, 0.08f, sf::Vector2u(80,80), player, 8);
-        }
-        case Batman :
+            std::cout << "mType: " << mType << std::endl;
+            m_Animations["walk"].create(6, 0, 0.06f, sf::Vector2u(80,80), player, 0);
+            m_Animations["up"].create(5, 6, 0.08f, sf::Vector2u(80,80), player, 5);
+            m_Animations["down"].create(5, 0, 0.08f, sf::Vector2u(80,80), player, 5);
+            m_Animations["idle"].create(7, 0, 0.2f, sf::Vector2u(80,80), player, 8);
             break;
+        }
         case Hollow :
-            m_Animations["idle"].create(6, 0, 0.08f, sf::Vector2u(100,100), player, 8);
+            std::cout << "mType: " << mType << std::endl;
+            m_Animations["idle"].create(6, 0, 0.2f, sf::Vector2u(128,128), player, 8);
+            m_Animations["walk"].create(8, 0, 0.06f, sf::Vector2u(128,128), player, 0);
+            m_Animations["dash"].create(1, 3, 0.04f, sf::Vector2u(128,128), player, 2);
+            m_Animations["up"].create(6, 6, 0.08f, sf::Vector2u(128,128), player, 5);
+            m_Animations["down"].create(6, 0, 0.08f, sf::Vector2u(128,128), player, 5);
             break;
     }
 }
 
 void Player::animate()
 {
-    if(mVelocity.x > 0)
+    if(mVelocity.x > 0 && mVelocity.x < 20)
     {
         player.setScale(sf::Vector2f(1.0,1.0));
         m_Animations["walk"].updateAnimation();
     }
-    else if(mVelocity.x < 0)
+    else if(mVelocity.x < 0 && mVelocity.x > -20)
     {
         player.setScale(sf::Vector2f(-1.0,1.0));
         m_Animations["walk"].updateAnimation();
     }
+    else if(mVelocity.x >= 20)
+    {
+        player.setScale(sf::Vector2f(1.0,1.0));
+        m_Animations["dash"].updateAnimation();
+    }
+    else if(mVelocity.x <= -20)
+    {
+        player.setScale(sf::Vector2f(-1.0,1.0));
+        m_Animations["dash"].updateAnimation();
+    }
     else if(mVelocity.x == 0 && mVelocity.y == 0)
     {
         m_Animations["idle"].updateAnimation();
+    }
+
+    if(mVelocity.y > 0)
+    {
+        m_Animations["up"].updateAnimation();
+    }
+    else if(mVelocity.y < 0)
+    {
+        m_Animations["down"].updateAnimation();
     }
 }
 
@@ -92,9 +110,13 @@ void Player::update()
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
         mVelocity.y = 5.f;
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-        mVelocity.x = -5.f;
+        mVelocity.x = -10.f;
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-        mVelocity.x = 5.f;
+        mVelocity.x = 10.f;
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::E))
+        mVelocity.x = 20.f;
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q))
+        mVelocity.x = -20.f;
     player.move(mVelocity);
 }
 

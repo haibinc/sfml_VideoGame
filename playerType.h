@@ -7,7 +7,6 @@
 enum playerType
 {
     Spidey,
-    Batman,
     Hollow
 };
 #endif //VIDEOGAME_PLAYERTYPE_H

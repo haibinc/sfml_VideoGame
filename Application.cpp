@@ -24,6 +24,7 @@ void Application::addComponents(Components &component)
 void Application::run()
 {
     sf::RenderWindow window(videoMode, title);
+
     window.setFramerateLimit(60);
     while(window.isOpen())
     {
@@ -39,7 +40,7 @@ void Application::run()
                 c->eventHandler(window, event);
             }
         }
-        window.clear();
+        window.clear(sf::Color::White);
         for (Updater *c : components)
         {
             c->update();

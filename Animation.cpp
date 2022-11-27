@@ -21,7 +21,7 @@ Animation::Animation(unsigned int rowFrames, unsigned int colFrames,  float anim
 
 }
 
-void Animation::create(unsigned int rowFrames, unsigned int colFrames,  float animationSpeed, sf::Vector2u spriteSize, sf::Sprite &sprite, unsigned int rowStart)
+void Animation::create(unsigned int rowFrames, unsigned int colFrames, float animationSpeed, sf::Vector2u spriteSize, sf::Sprite &sprite, unsigned int rowStart)
 {
     sprite.setOrigin(sf::Vector2f(spriteSize.x/2, spriteSize.y/2));
     m_updateTime = animationSpeed;
@@ -33,22 +33,32 @@ void Animation::create(unsigned int rowFrames, unsigned int colFrames,  float an
 
 void Animation::updateAnimation()
 {
-    float m_elapsedTime = 2050000.0f;
-    while(m_elapsedTime >= m_updateTime)
+    while(clock.getElapsedTime().asSeconds() < m_updateTime)
     {
-        m_elapsedTime -= m_updateTime;
     }
     if(++m_currentFrame >= m_frameCount)
     {
         m_currentFrame = 0;
     }
     m_Sprite->setTextureRect(m_textureRect[m_currentFrame]);
+    clock.restart();
 }
 
 void Animation::CutFrames(const unsigned int &rowFrames, const unsigned int &colFrames, const unsigned int &rowStart, const sf::Vector2u &spriteSize)
 {
-    for (int i = 0; i < rowFrames; ++i)
+    if(colFrames > 0)
     {
-        m_textureRect[i] = sf::IntRect((spriteSize.x*i), spriteSize.y * rowStart, spriteSize.x, spriteSize.y);
+        int counter = colFrames;
+        for (int i = 0; i < rowFrames; ++i)
+        {
+            m_textureRect[i] = sf::IntRect((spriteSize.x * counter), spriteSize.y * rowStart, spriteSize.x, spriteSize.y);
+            counter++;
+        }
+    }
+    else
+    {
+        for (int i = 0; i < rowFrames; ++i) {
+            m_textureRect[i] = sf::IntRect((spriteSize.x * i), spriteSize.y * rowStart, spriteSize.x, spriteSize.y);
+        }
     }
 }

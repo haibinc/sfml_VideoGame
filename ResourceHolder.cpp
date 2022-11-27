@@ -4,6 +4,10 @@
 #ifndef VIDEOGAME_RESOURCEHOLDER_CPP
 #define VIDEOGAME_RESOURCEHOLDER_CPP
 #include "ResourceHolder.h"
+
+template<class Identifier, class Resource>
+std::map<Identifier, std::unique_ptr<Resource>> ResourceHolder<Identifier, Resource>::mResourceMap;
+
 template <class Identifier, class Resource>
 ResourceHolder<Identifier, Resource>::ResourceHolder()
 {

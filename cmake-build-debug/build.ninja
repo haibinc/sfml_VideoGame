@@ -130,6 +130,27 @@ build CMakeFiles/videoGame.dir/Game.cpp.o: CXX_COMPILER__videoGame_Debug /Users/
   OBJECT_DIR = CMakeFiles/videoGame.dir
   OBJECT_FILE_DIR = CMakeFiles/videoGame.dir
 
+build CMakeFiles/videoGame.dir/States.cpp.o: CXX_COMPILER__videoGame_Debug /Users/haibin/CLionProjects/videoGame/States.cpp || cmake_object_order_depends_target_videoGame
+  DEP_FILE = CMakeFiles/videoGame.dir/States.cpp.o.d
+  FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
+  INCLUDES = -isystem /usr/local/include
+  OBJECT_DIR = CMakeFiles/videoGame.dir
+  OBJECT_FILE_DIR = CMakeFiles/videoGame.dir
+
+build CMakeFiles/videoGame.dir/Position.cpp.o: CXX_COMPILER__videoGame_Debug /Users/haibin/CLionProjects/videoGame/Position.cpp || cmake_object_order_depends_target_videoGame
+  DEP_FILE = CMakeFiles/videoGame.dir/Position.cpp.o.d
+  FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
+  INCLUDES = -isystem /usr/local/include
+  OBJECT_DIR = CMakeFiles/videoGame.dir
+  OBJECT_FILE_DIR = CMakeFiles/videoGame.dir
+
+build CMakeFiles/videoGame.dir/MouseEvents.cpp.o: CXX_COMPILER__videoGame_Debug /Users/haibin/CLionProjects/videoGame/MouseEvents.cpp || cmake_object_order_depends_target_videoGame
+  DEP_FILE = CMakeFiles/videoGame.dir/MouseEvents.cpp.o.d
+  FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
+  INCLUDES = -isystem /usr/local/include
+  OBJECT_DIR = CMakeFiles/videoGame.dir
+  OBJECT_FILE_DIR = CMakeFiles/videoGame.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target videoGame
@@ -138,7 +159,7 @@ build CMakeFiles/videoGame.dir/Game.cpp.o: CXX_COMPILER__videoGame_Debug /Users/
 #############################################
 # Link the executable videoGame
 
-build videoGame: CXX_EXECUTABLE_LINKER__videoGame_Debug CMakeFiles/videoGame.dir/main.cpp.o CMakeFiles/videoGame.dir/mainMenu.cpp.o CMakeFiles/videoGame.dir/Application.cpp.o CMakeFiles/videoGame.dir/Components.cpp.o CMakeFiles/videoGame.dir/EventHandler.cpp.o CMakeFiles/videoGame.dir/Updater.cpp.o CMakeFiles/videoGame.dir/Player.cpp.o CMakeFiles/videoGame.dir/Animation.cpp.o CMakeFiles/videoGame.dir/ResourceHolder.cpp.o CMakeFiles/videoGame.dir/Entity.cpp.o CMakeFiles/videoGame.dir/Mommy.cpp.o CMakeFiles/videoGame.dir/Game.cpp.o | /usr/local/lib/libsfml-graphics.2.5.1.dylib /usr/local/lib/libsfml-audio.2.5.1.dylib /usr/local/lib/libsfml-network.2.5.1.dylib /usr/local/lib/libsfml-window.2.5.1.dylib /usr/local/lib/libsfml-system.2.5.1.dylib
+build videoGame: CXX_EXECUTABLE_LINKER__videoGame_Debug CMakeFiles/videoGame.dir/main.cpp.o CMakeFiles/videoGame.dir/mainMenu.cpp.o CMakeFiles/videoGame.dir/Application.cpp.o CMakeFiles/videoGame.dir/Components.cpp.o CMakeFiles/videoGame.dir/EventHandler.cpp.o CMakeFiles/videoGame.dir/Updater.cpp.o CMakeFiles/videoGame.dir/Player.cpp.o CMakeFiles/videoGame.dir/Animation.cpp.o CMakeFiles/videoGame.dir/ResourceHolder.cpp.o CMakeFiles/videoGame.dir/Entity.cpp.o CMakeFiles/videoGame.dir/Mommy.cpp.o CMakeFiles/videoGame.dir/Game.cpp.o CMakeFiles/videoGame.dir/States.cpp.o CMakeFiles/videoGame.dir/Position.cpp.o CMakeFiles/videoGame.dir/MouseEvents.cpp.o | /usr/local/lib/libsfml-graphics.2.5.1.dylib /usr/local/lib/libsfml-audio.2.5.1.dylib /usr/local/lib/libsfml-network.2.5.1.dylib /usr/local/lib/libsfml-window.2.5.1.dylib /usr/local/lib/libsfml-system.2.5.1.dylib
   FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
   LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  /usr/local/lib/libsfml-graphics.2.5.1.dylib  /usr/local/lib/libsfml-audio.2.5.1.dylib  /usr/local/lib/libsfml-network.2.5.1.dylib  /usr/local/lib/libsfml-window.2.5.1.dylib  /usr/local/lib/libsfml-system.2.5.1.dylib
   OBJECT_DIR = CMakeFiles/videoGame.dir
