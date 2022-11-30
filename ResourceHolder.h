@@ -10,6 +10,7 @@
 #include "ResourceIdentifier.h"
 #include <map>
 #include <string>
+#include <memory>
 
 template <class Identifier, class Resource>
 class ResourceHolder

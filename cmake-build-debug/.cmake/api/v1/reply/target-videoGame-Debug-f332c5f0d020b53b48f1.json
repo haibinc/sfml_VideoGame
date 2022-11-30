@@ -76,8 +76,9 @@
 				19,
 				22,
 				25,
-				28,
-				30
+				27,
+				29,
+				31
 			]
 		}
 	],
@@ -152,8 +153,9 @@
 				19,
 				22,
 				25,
-				28,
-				30
+				27,
+				29,
+				31
 			]
 		},
 		{
@@ -174,9 +176,9 @@
 				23,
 				24,
 				26,
-				27,
-				29,
-				31
+				28,
+				30,
+				32
 			]
 		}
 	],
@@ -322,22 +324,6 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "States.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "States.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "statesEnum.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
 			"path" : "Position.cpp",
 			"sourceGroupIndex" : 0
 		},
@@ -355,6 +341,28 @@
 		{
 			"backtrace" : 1,
 			"path" : "MouseEvents.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "StateMachine.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "StateMachine.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "States.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "States.h",
 			"sourceGroupIndex" : 1
 		}
 	],

@@ -41,7 +41,7 @@ void Player::initAnimations(playerType mType)
     {
         case Spidey :
         {
-            std::cout << "mType: " << mType << std::endl;
+            //we've associated walk with this animation class with these row frames and these col frames
             m_Animations["walk"].create(6, 0, 0.06f, sf::Vector2u(80,80), player, 0);
             m_Animations["up"].create(5, 6, 0.08f, sf::Vector2u(80,80), player, 5);
             m_Animations["down"].create(5, 0, 0.08f, sf::Vector2u(80,80), player, 5);
@@ -49,7 +49,6 @@ void Player::initAnimations(playerType mType)
             break;
         }
         case Hollow :
-            std::cout << "mType: " << mType << std::endl;
             m_Animations["idle"].create(6, 0, 0.2f, sf::Vector2u(128,128), player, 8);
             m_Animations["walk"].create(8, 0, 0.06f, sf::Vector2u(128,128), player, 0);
             m_Animations["dash"].create(1, 3, 0.04f, sf::Vector2u(128,128), player, 2);

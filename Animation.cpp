@@ -27,7 +27,7 @@ void Animation::create(unsigned int rowFrames, unsigned int colFrames, float ani
     m_updateTime = animationSpeed;
     m_Sprite = &sprite;
     m_frameCount = rowFrames;
-    m_textureRect = new sf::IntRect[rowFrames];
+    m_textureRect = new sf::IntRect[m_frameCount];
     CutFrames(rowFrames, colFrames, rowStart, spriteSize);
 }
 

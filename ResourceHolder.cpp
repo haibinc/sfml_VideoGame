@@ -23,12 +23,15 @@ ResourceHolder<Identifier, Resource>::ResourceHolder()
 template <class Identifier, class Resource>
 void ResourceHolder<Identifier, Resource>::load(Identifier id, const std::string &fileName)
 {
+    //unique_ptr constructor is explicit
+    //or you can do std::unique_ptr<Resource> resource = std::make_unique<Resource>();
     std::unique_ptr<Resource> resource(new Resource);
     resource->loadFromFile(fileName);
     if(!resource->loadFromFile(fileName))
     {
         throw std::runtime_error("ResourceHolder::load failed to load " + fileName);
     }
+    //std::move takes the ownership of variable resource to std::make_pair
     auto inserted = mResourceMap.insert(std::make_pair(id, std::move(resource)));
     assert(inserted.second);
 }
